@@ -17,9 +17,9 @@ function fuckYou(processName, callback) {
 
     exec(`killall -9 ${processName}`, (error, stdout, stderr) => {
       if (error)
-        return reject(err, stderr)
+        return reject(stderr)
 
-      resolve(null, '(╯°□°）╯︵ ' + srettel.reverse().map(element => map.get(element)).join(''))
+      resolve('(╯°□°）╯︵ ' + srettel.reverse().map(element => map.get(element)).join(''))
     })
   })
 }

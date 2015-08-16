@@ -4,8 +4,11 @@
   "main": "fuck.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "babel src/fuck.js > fuck.js",
+    "compile": "babel src/fuck.js > fuck.js;babel src/cli.js > bin/cli.js",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "bin": {
+    "fuck": "bin/cli.js"
   },
   "keywords": [
     "fuck",
@@ -24,6 +27,7 @@
     "semantic-release": "^4.0.3"
   },
   "dependencies": {
-    "bluebird": "^2.9.34"
+    "bluebird": "^2.9.34",
+    "minimist": "^1.1.3"
   }
 }

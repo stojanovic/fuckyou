@@ -20,9 +20,9 @@ function fuckYou(processName, callback) {
     });
 
     exec('killall -9 ' + processName, function (error, stdout, stderr) {
-      if (error) return reject(err, stderr);
+      if (error) return reject(stderr);
 
-      resolve(null, '(╯°□°）╯︵ ' + srettel.reverse().map(function (element) {
+      resolve('(╯°□°）╯︵ ' + srettel.reverse().map(function (element) {
         return map.get(element);
       }).join(''));
     });
