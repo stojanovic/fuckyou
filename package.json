@@ -8,7 +8,8 @@
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "bin": {
-    "fuck": "bin/cli.js"
+    "fuck": "bin/cli.js",
+    "fu": "bin/cli.js"
   },
   "keywords": [
     "fuck",
