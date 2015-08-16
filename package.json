@@ -1,0 +1,26 @@
+{
+  "name": "fuckyou",
+  "description": "Kill any process (╯°□°）╯︵ ssǝɔoɹd",
+  "main": "fuck.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "babel src/fuck.js > fuck.js",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "keywords": [
+    "fuck",
+    "you",
+    "kill",
+    "process"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stojanovic/fuckyou.git"
+  },
+  "author": "Slobodan Stojanovic <slobodan@cloudhorizon.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^5.8.21",
+    "semantic-release": "^4.0.3"
+  }
+}
