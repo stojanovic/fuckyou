@@ -1,23 +1,26 @@
 'use strict'
 
-const exec = require('child_process').exec
+const exec    = require('child_process').exec
+    , Promise = require('bluebird')
 
 function fuckYou(processName, callback) {
-  if (!processName)
-    throw('Process name is required!')
+  return new Promise((resolve, reject) => {
+    if (!processName)
+      return reject('Process name is required!')
 
-  let letters = 'abcdefghijklmnopqrstuvqxyz'.split('')
-  let srettel = 'ɐqɔpǝɟƃɥıɾʞʃɯuodbɹsʇnʌʍxʎz'.split('')
+    let letters = 'abcdefghijklmnopqrstuvqxyz'.split('')
+    let srettel = 'ɐqɔpǝɟƃɥıɾʞʃɯuodbɹsʇnʌʍxʎz'.split('')
 
-  let map = new Map()
+    let map = new Map()
 
-  letters.forEach((element, index) => map.set(element, srettel[index]))
+    letters.forEach((element, index) => map.set(element, srettel[index]))
 
-  exec(`killall -9 ${processName}`, (error, stdout, stderr) => {
-    if (error)
-      return callback(err, stderr)
+    exec(`killall -9 ${processName}`, (error, stdout, stderr) => {
+      if (error)
+        return reject(err, stderr)
 
-    callback(null, '(╯°□°）╯︵ ' + srettel.reverse().map(element => map.get(element)).join(''))
+      resolve(null, '(╯°□°）╯︵ ' + srettel.reverse().map(element => map.get(element)).join(''))
+    })
   })
 }
 

@@ -3,26 +3,29 @@
 Object.defineProperty(exports, '__esModule', {
   value: true
 });
-var exec = require('child_process').exec;
+var exec = require('child_process').exec,
+    Promise = require('bluebird');
 
 function fuckYou(processName, callback) {
-  if (!processName) throw 'Process name is required!';
+  return new Promise(function (resolve, reject) {
+    if (!processName) return reject('Process name is required!');
 
-  var letters = 'abcdefghijklmnopqrstuvqxyz'.split('');
-  var srettel = 'ɐqɔpǝɟƃɥıɾʞʃɯuodbɹsʇnʌʍxʎz'.split('');
+    var letters = 'abcdefghijklmnopqrstuvqxyz'.split('');
+    var srettel = 'ɐqɔpǝɟƃɥıɾʞʃɯuodbɹsʇnʌʍxʎz'.split('');
 
-  var map = new Map();
+    var map = new Map();
 
-  letters.forEach(function (element, index) {
-    return map.set(element, srettel[index]);
-  });
+    letters.forEach(function (element, index) {
+      return map.set(element, srettel[index]);
+    });
 
-  exec('killall -9 ' + processName, function (error, stdout, stderr) {
-    if (error) return callback(err, stderr);
+    exec('killall -9 ' + processName, function (error, stdout, stderr) {
+      if (error) return reject(err, stderr);
 
-    callback(null, '(╯°□°）╯︵ ' + srettel.reverse().map(function (element) {
-      return map.get(element);
-    }).join(''));
+      resolve(null, '(╯°□°）╯︵ ' + srettel.reverse().map(function (element) {
+        return map.get(element);
+      }).join(''));
+    });
   });
 }
 

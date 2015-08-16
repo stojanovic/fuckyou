@@ -22,5 +22,8 @@
   "devDependencies": {
     "babel": "^5.8.21",
     "semantic-release": "^4.0.3"
+  },
+  "dependencies": {
+    "bluebird": "^2.9.34"
   }
 }
