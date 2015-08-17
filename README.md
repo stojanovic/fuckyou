@@ -1,5 +1,5 @@
 # Fuck
-Kill any process witth a simple command! (╯°□°）╯︵ ssǝɔoɹd
+Kill any process with a simple command! (╯°□°）╯︵ ssǝɔoɹd
 
 ## How to install
 
@@ -21,5 +21,7 @@ Or simply:
 
 Options:
 
-    <processName>           name of the process that you want to kill
+    <processName>           name of the process that you want to kill,
+                            keep in mind that process names are case sensitive
+
     -h, --help              show this help

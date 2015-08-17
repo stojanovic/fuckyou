@@ -8,13 +8,14 @@ Usage:
 
 Description:
 
-    Kill any process witth a simple command!
+    Kill any process with a simple command!
 
     (╯°□°）╯︵ ssǝɔoɹd
 
 Options:
 
-    <processName>           name of the process that you want to kill
-    -h, --help              show this help
+    <processName>           name of the process that you want to kill,
+                            keep in mind that process names are case sensitive
 
+    -h, --help              show this help
 

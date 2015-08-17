@@ -23,7 +23,7 @@ function fuckYou(processName, callback) {
       if (error) return reject(stderr);
 
       resolve('(╯°□°）╯︵ ' + processName.split('').reverse().map(function (element) {
-        return map.get(element);
+        return map.get(element.toLowerCase());
       }).join(''));
     });
   });
