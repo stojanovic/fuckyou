@@ -1,17 +1,4 @@
-# Fuck
-Kill any process witth a simple command! (╯°□°）╯︵ ssǝɔoɹd
-
-## How to install
-
-Install it globally from npm:
-
-`npm install fuckyou --global`
-
-Or simply:
-
-`npm i fuckyou -g`
-
-## Usage
+Usage:
 
     fuck you [options]
     fuck off [options]
@@ -19,7 +6,15 @@ Or simply:
     fuck [options]
     fu [options]
 
+Description:
+
+    Kill any process witth a simple command!
+
+    (╯°□°）╯︵ ssǝɔoɹd
+
 Options:
 
     <processName>           name of the process that you want to kill
     -h, --help              show this help
+
+

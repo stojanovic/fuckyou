@@ -3,8 +3,18 @@
 
 'use strict';
 
-var argv = require('minimist')(process.argv.slice(2)),
+var fs = require('fs'),
+    argv = require('minimist')(process.argv.slice(2)),
     fuck = require('../fuck');
+
+var usage = function usage(code) {
+  var rs = fs.createReadStream(__dirname + '/help.txt');
+
+  rs.pipe(process.stdout);
+  rs.on('close', function (code) {
+    if (code) process.exit(code);
+  });
+};
 
 var args = ['you', 'off', 'u'];
 
@@ -21,6 +31,6 @@ if (argv._.length > 1 && args.indexOf(argv._[0]) > -1) {
 } else if (argv._.length === 1) {
   fuckYou(argv._[0]);
 } else {
-  console.log('help');
+  usage(0);
 }
 

@@ -22,7 +22,7 @@ function fuckYou(processName, callback) {
     exec('killall -9 ' + processName, function (error, stdout, stderr) {
       if (error) return reject(stderr);
 
-      resolve('(╯°□°）╯︵ ' + srettel.reverse().map(function (element) {
+      resolve('(╯°□°）╯︵ ' + processName.split('').reverse().map(function (element) {
         return map.get(element);
       }).join(''));
     });
