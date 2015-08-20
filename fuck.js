@@ -25,7 +25,7 @@ function fuckYou(processName) {
       return map[element] = srettel[index];
     });
 
-    (0, _child_process.exec)('killall -9 ' + processName, function (error, stdout, stderr) {
+    (0, _child_process.exec)('killall -9 ' + processName.replace(/ /g, '\\ '), function (error, stdout, stderr) {
 
       if (error) return reject(stderr);
 

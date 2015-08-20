@@ -15,7 +15,7 @@ function fuckYou(processName) {
 
     letters.forEach((element, index) => map[element] = srettel[index])
 
-    exec(`killall -9 ${processName}`, (error, stdout, stderr) => {
+    exec(`killall -9 ${processName.replace(/ /g, '\\ ')}`, (error, stdout, stderr) => {
 
       if (error)
         return reject(stderr)
