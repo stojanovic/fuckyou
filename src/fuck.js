@@ -1,7 +1,7 @@
 'use strict'
 
-const exec    = require('child_process').exec
-    , Promise = require('bluebird')
+import { exec } from 'child_process'
+import Promise from 'bluebird'
 
 function fuckYou(processName) {
   return new Promise((resolve, reject) => {

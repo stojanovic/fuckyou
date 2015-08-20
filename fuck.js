@@ -3,11 +3,17 @@
 Object.defineProperty(exports, '__esModule', {
   value: true
 });
-var exec = require('child_process').exec,
-    Promise = require('bluebird');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+var _child_process = require('child_process');
+
+var _bluebird = require('bluebird');
+
+var _bluebird2 = _interopRequireDefault(_bluebird);
 
 function fuckYou(processName) {
-  return new Promise(function (resolve, reject) {
+  return new _bluebird2['default'](function (resolve, reject) {
     if (!processName) return reject('Process name is required!');
 
     var letters = 'abcdefghijklmnopqrstuvqxyz'.split('');
@@ -19,7 +25,7 @@ function fuckYou(processName) {
       return map[element] = srettel[index];
     });
 
-    exec('killall -9 ' + processName, function (error, stdout, stderr) {
+    (0, _child_process.exec)('killall -9 ' + processName, function (error, stdout, stderr) {
 
       if (error) return reject(stderr);
 
