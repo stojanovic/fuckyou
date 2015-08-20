@@ -1,5 +1,10 @@
+[![Build Status](https://travis-ci.org/stojanovic/fuckyou.svg)](https://travis-ci.org/stojanovic/fuckyou) [![npm version](https://badge.fury.io/js/fuckyou.svg)](http://badge.fury.io/js/fuckyou)
+
+
 # Fuck
 Kill any process with a simple command! (╯°□°）╯︵ ssǝɔoɹd
+
+Based on this gist: [https://gist.github.com/stojanovic/a4b99d3f2ed46a868fcd](https://gist.github.com/stojanovic/a4b99d3f2ed46a868fcd).
 
 ## How to install
 
