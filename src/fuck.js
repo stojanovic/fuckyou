@@ -11,17 +11,16 @@ function fuckYou(processName) {
     let letters = 'abcdefghijklmnopqrstuvqxyz'.split('')
     let srettel = 'ɐqɔpǝɟƃɥıɾʞʃɯuodbɹsʇnʌʍxʎz'.split('')
 
-    let map = new Map()
+    let map = {}
 
-    letters.forEach((element, index) => map.set(element, srettel[index]))
+    letters.forEach((element, index) => map[element] = srettel[index])
 
     exec(`killall -9 ${processName}`, (error, stdout, stderr) => {
-      '(╯°□°）╯︵ ' + processName.split('').reverse().map(element => map.get(element.toLowerCase())).join('')
 
       if (error)
         return reject(stderr)
 
-      resolve('(╯°□°）╯︵ ' + processName.split('').reverse().map(element => map.get(element.toLowerCase())).join(''))
+      resolve('(╯°□°）╯︵ ' + processName.split('').reverse().map(element => map[element.toLowerCase()]).join(''))
     })
   })
 }

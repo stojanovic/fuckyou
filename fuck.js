@@ -13,21 +13,18 @@ function fuckYou(processName) {
     var letters = 'abcdefghijklmnopqrstuvqxyz'.split('');
     var srettel = 'ɐqɔpǝɟƃɥıɾʞʃɯuodbɹsʇnʌʍxʎz'.split('');
 
-    var map = new Map();
+    var map = {};
 
     letters.forEach(function (element, index) {
-      return map.set(element, srettel[index]);
+      return map[element] = srettel[index];
     });
 
     exec('killall -9 ' + processName, function (error, stdout, stderr) {
-      '(╯°□°）╯︵ ' + processName.split('').reverse().map(function (element) {
-        return map.get(element.toLowerCase());
-      }).join('');
 
       if (error) return reject(stderr);
 
       resolve('(╯°□°）╯︵ ' + processName.split('').reverse().map(function (element) {
-        return map.get(element.toLowerCase());
+        return map[element.toLowerCase()];
       }).join(''));
     });
   });
