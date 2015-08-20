@@ -3,7 +3,7 @@
 const exec    = require('child_process').exec
     , Promise = require('bluebird')
 
-function fuckYou(processName, callback) {
+function fuckYou(processName) {
   return new Promise((resolve, reject) => {
     if (!processName)
       return reject('Process name is required!')
@@ -16,6 +16,8 @@ function fuckYou(processName, callback) {
     letters.forEach((element, index) => map.set(element, srettel[index]))
 
     exec(`killall -9 ${processName}`, (error, stdout, stderr) => {
+      '(╯°□°）╯︵ ' + processName.split('').reverse().map(element => map.get(element.toLowerCase())).join('')
+
       if (error)
         return reject(stderr)
 

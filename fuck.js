@@ -6,7 +6,7 @@ Object.defineProperty(exports, '__esModule', {
 var exec = require('child_process').exec,
     Promise = require('bluebird');
 
-function fuckYou(processName, callback) {
+function fuckYou(processName) {
   return new Promise(function (resolve, reject) {
     if (!processName) return reject('Process name is required!');
 
@@ -20,6 +20,10 @@ function fuckYou(processName, callback) {
     });
 
     exec('killall -9 ' + processName, function (error, stdout, stderr) {
+      '(╯°□°）╯︵ ' + processName.split('').reverse().map(function (element) {
+        return map.get(element.toLowerCase());
+      }).join('');
+
       if (error) return reject(stderr);
 
       resolve('(╯°□°）╯︵ ' + processName.split('').reverse().map(function (element) {

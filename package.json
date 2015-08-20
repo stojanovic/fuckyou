@@ -3,7 +3,7 @@
   "description": "Kill any process (╯°□°）╯︵ ssǝɔoɹd",
   "main": "fuck.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "tape tests/**/*.js",
     "compile": "babel src/fuck.js > fuck.js;babel src/cli.js > bin/cli.js",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
@@ -25,7 +25,8 @@
   "license": "MIT",
   "devDependencies": {
     "babel": "^5.8.21",
-    "semantic-release": "^4.0.3"
+    "semantic-release": "^4.0.3",
+    "tape": "^4.2.0"
   },
   "dependencies": {
     "bluebird": "^2.9.34",
