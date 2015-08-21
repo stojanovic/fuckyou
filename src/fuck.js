@@ -20,7 +20,7 @@ function fuckYou(processName) {
       if (error)
         return reject(stderr)
 
-      resolve('(╯°□°）╯︵ ' + processName.split('').reverse().map(element => map[element.toLowerCase()]).join(''))
+      resolve('(╯°□°）╯︵ ' + processName.split('').reverse().map(element => map[element.toLowerCase()] || element).join(''))
     })
   })
 }

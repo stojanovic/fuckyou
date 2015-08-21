@@ -30,7 +30,7 @@ function fuckYou(processName) {
       if (error) return reject(stderr);
 
       resolve('(╯°□°）╯︵ ' + processName.split('').reverse().map(function (element) {
-        return map[element.toLowerCase()];
+        return map[element.toLowerCase()] || element;
       }).join(''));
     });
   });
