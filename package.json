@@ -31,6 +31,6 @@
   "dependencies": {
     "bluebird": "2.10.1",
     "minimist": "1.2.0",
-    "ps-list": "2.1.1"
+    "ps-list": "2.1.2"
   }
 }
