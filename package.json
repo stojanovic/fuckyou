@@ -26,7 +26,7 @@
   "devDependencies": {
     "babel": "5.8.23",
     "semantic-release": "4.3.5",
-    "tape": "4.2.1"
+    "tape": "4.2.2"
   },
   "dependencies": {
     "bluebird": "2.10.2",
