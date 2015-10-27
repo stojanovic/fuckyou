@@ -29,7 +29,7 @@
     "tape": "4.2.2"
   },
   "dependencies": {
-    "bluebird": "2.10.2",
+    "bluebird": "3.0.0",
     "minimist": "1.2.0",
     "ps-list": "3.0.0"
   }
