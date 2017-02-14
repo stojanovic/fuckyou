@@ -24,7 +24,7 @@
   "author": "Slobodan Stojanovic <slobodan@cloudhorizon.com>",
   "license": "MIT",
   "devDependencies": {
-    "babel": "6.3.26",
+    "babel": "6.23.0",
     "semantic-release": "6.3.2",
     "tape": "4.6.2"
   },
